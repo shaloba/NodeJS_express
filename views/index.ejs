@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NodeJS Express</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<% include templates/headers.ejs %>
+<p>My name is <%= name %></p>
+<p>Total points: <%= videodata.categoryName %></p>
+<ul>
+    <% videodata.categories.forEach(function (item){ %>
+    <li><a href="/?categoryID=<%= item.categoryID %>">category: <%= item.categoryName %></a></li>
+    <% }); %>
+</ul>
+<%= category.categoryID %> <br>
+<%= category.parentID %><br>
+<%= category.subjectID %><br>
+<%= category.categoryName %><br>
+<%= category.categoryDescription %><br>
+<%= category.videosCount %><br>
+<%= category.forumCategoryID%>
+%>
+</body>
+</html>
